@@ -285,8 +285,8 @@ main {
   }
 
   .present-custom {
-    bottom: 10%; /* Baja la posición para centrar en la pantalla */
-    right: 50%;
+    position: absolute; 
+    right: 1000px !important;
     transform: translateX(50%);
   }
 
