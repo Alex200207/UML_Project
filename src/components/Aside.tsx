@@ -25,7 +25,7 @@ const Aside: React.FC<AsideProps> = ({ isOpen }) => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/productPage/productos" className="nav-linkp">
+          <Link to="/Consulta" className="nav-linkp">
             <MdProductionQuantityLimits /> Consulta
           </Link>
         </li>

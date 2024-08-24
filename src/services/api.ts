@@ -1,13 +1,13 @@
+// src/services/api.ts
 import axios from 'axios';
 
-const API_URL = 'https://disease.sh/v3/covid-19'; // URL base de la API
 
-export const fetchDiseaseData = async (endpoint: string) => {
-    try {
-        const response = await axios.get(`${API_URL}/${endpoint}`);
-        return response.data;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        throw error;
-    }
+export const fetchDiseaseData = async (query: string) => {
+    const apiKey = process.env.REACT_APP_API_KEY; 
+    const response = await axios.get(`https://api.openai.com/v1/diseases/${query}`, {
+        headers: {
+            'Authorization': `Bearer ${apiKey}`,
+        },
+    });
+    return response.data;
 };

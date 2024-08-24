@@ -1,51 +1,67 @@
+// src/components/InfoSection.tsx
 import React, { useState } from 'react';
-import { fetchDiseaseData } from '../services/api.ts';
+import { fetchDiseaseData } from '../services/api';
+
 const InfoSection: React.FC = () => {
-    interface DiseaseData {
-        // Define the properties of your data object here
-        // For example:
-        id: number;
-        name: string;
-        // ...
+    interface Message {
+        role: 'user' | 'assistant';
+        content: string;
     }
-    
-    const [data, setData] = useState<DiseaseData | null>(null);
-    const [error, setError] = useState<string | null>(null);
+
+    const [messages, setMessages] = useState<Message[]>([]);
     const [query, setQuery] = useState<string>('');
+    const [error, setError] = useState<string | null>(null);
 
     const handleSearch = async () => {
+        if (!query.trim()) return;
+
+
+        setMessages((prev) => [...prev, { role: 'user', content: query }]);
+        setQuery('');
+
         try {
-            const result = await fetchDiseaseData(`all?query=${query}`); // Ajusta según la API y el endpoint
-            setData(result);
-        } catch {
+            const response = await fetchDiseaseData(query);
+            setMessages((prev) => [...prev, { role: 'assistant', content: response }]);
+            setError(null); // Limpiar el error en caso de éxito
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (err) {
             setError('Error fetching data');
+            setMessages((prev) => [...prev, { role: 'assistant', content: 'Lo siento, no se pudo obtener información.' }]);
         }
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Consultar Información sobre Enfermedades</h2>
-            <div className="mb-4">
-                <input
-                    type="text"
-                    placeholder="Buscar..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    className="border border-gray-300 p-2 rounded-md w-full"
-                />
-                <button
-                    onClick={handleSearch}
-                    className="mt-2 bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
-                >
-                    Buscar
-                </button>
+        <div className="container mt-5">
+            <div className="card shadow">
+                <div className="card-body">
+                    <h2 className="card-title text-center">Consulta de Enfermedades</h2>
+                    <div className="mb-4">
+                        <div className="input-group">
+                            <input
+                                type="text"
+                                placeholder="¿Sobre qué enfermedad deseas información?"
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}
+                                className="form-control"
+                            />
+                            <button
+                                onClick={handleSearch}
+                                className="btn btn-primary"
+                            >
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                    {error && <div className="alert alert-danger text-center">{error}</div>}
+                    <div className="border-top pt-3">
+                        {messages.map((message, index) => (
+                            <div key={index} className={`mb-2 p-3 rounded ${message.role === 'user' ? 'bg-primary text-white' : 'bg-light text-dark'}`}>
+                                <strong>{message.role === 'user' ? 'Usuario:' : 'Asistente:'}</strong> {message.content}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-            {error && <div className="text-red-500 mb-4">{error}</div>}
-            {data ? (
-                <pre className="bg-gray-100 p-4 rounded-md">{JSON.stringify(data, null, 2)}</pre>
-            ) : (
-                <p className="text-gray-500">No hay datos para mostrar.</p>
-            )}
         </div>
     );
 };
