@@ -259,18 +259,14 @@ main {
     object-fit: cover;
   }
 
-  .present-custom {
-    bottom: 10%; /* Baja la posición para centrar en la pantalla */
-    right: 50%;
-    transform: translateX(50%);
-  }
-
   .present-custom h1 {
-    font-size: 1.2rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    position: relative;
+    bottom: 80px;
+    font-size: 2.0rem; /* Tamaño de fuente reducido para dispositivos móviles */
   }
 
   .present-custom p {
-    font-size: 1rem; /* Tamaño de texto reducido */
+   display: none;
   }
 }
 
@@ -282,20 +278,5 @@ main {
   .block-custom {
     height: 15vh;
     object-fit: cover;
-  }
-
-  .present-custom {
-    word-wrap: break-word;
-    position: absolute; 
-    right: 1000px !important;
-    transform: translateX(50%);
-  }
-
-  .present-custom h1 {
-    font-size: 1.2rem; /* Tamaño de fuente reducido para dispositivos móviles */
-  }
-
-  .present-custom p {
-    font-size: 1rem; /* Tamaño de texto reducido */
   }
 }
