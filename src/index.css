@@ -285,6 +285,7 @@ main {
   }
 
   .present-custom {
+    word-wrap: break-word;
     position: absolute; 
     right: 1000px !important;
     transform: translateX(50%);
