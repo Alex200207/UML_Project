@@ -13,14 +13,14 @@ const Home: React.FC = () => {
                 <div className="col-md-4">
                     <InfoCard 
                         title="cancer" 
-                        description="Información sobre el Cáncer de mama." 
+                        description="¿Que es  el Cáncer de mama?." 
                         image={portadaCancer}
                     />
                 </div>
                 <div className="col-md-4">
                     <InfoCard 
                         title="Diabetes" 
-                        description="Información sobre la diabetes." 
+                        description="¿Qué es la diabetes?." 
                         image={diabetesPortada}
                     />
                 </div>
