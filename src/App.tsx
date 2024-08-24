@@ -26,7 +26,7 @@ const App: React.FC = () => {
         <div className={`content ${isAsideOpen ? "aside-open" : ""}`}>
         <Portada
             backgroundImage="path/to/image.jpg"
-            height="600px" name={""}          />
+            height="600px"          />
         <main>
           <Routes>
             <Route path="/" element={<Home/>} />
