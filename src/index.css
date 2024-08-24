@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.d-flex {
+  display: flex;
+  width: 100%;
+}
+.form-control{
+  width: 100%;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 230px;
+  height: 100%;
+  background-color: #fffcfc;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  margin-top: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
+.sidebar a {
+  margin-bottom: 30px;
+  border: none;
+  color: #000000;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0px 2px 2px rgba(184, 181, 181, 0.2); 
+}
+
+
+.sidebar a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #5f5c5c;
+}
+
+.content {
+  flex-grow: 1;
+  transition: margin-left 0.3s;
+  width: 100%;
+}
+.navbar-custom {
+  z-index: 1000;
+  position: fixed !important;
+  width: 100%;
+  background-color:#313131; 
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+.navbar-brand{
+  color: #efe0e0 !important;
+  margin: 0 15px ;
+  font-weight: 700;
+  transition: .2s ease;
+}
+.navbar-brand:focus{
+color: #c8c7c7 !important;
+}
+.navbar-brand:hover{
+  color: #e5abcd;
+  transform: rotate(10deg);
+}
+
+.present-custom{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  white-space: nowrap;
+  transition: .5s ease;
+  color: #000000;
+}
+.present-custom:hover{
+  font-weight: 700;
+  transform: scale(1.1);
+  cursor: pointer;
+  
+}
+.present-custom:active{
+  
+  transform: translate(30%) scale(1.1);
+}
+
+
+main {
+  margin-left: 0;
+  width: 100;
+}
+.container-custom {
+  bottom: 50x;
+  position: absolute;
+
+}
+
+.btn-custom{
+  
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.5);
+  transition: 0.2s linear;
+}
+
+.btn-custom:hover{
+  transform: scale(1.1);
+  color: #ffffff;
+  background-color: #777777;
+}
+#select__navbar{
+  width: 30%;
+}
+
+.me-22{
+  padding: 6px;
+  border: none;
+  transition: 0.2s ease ;
+}
+.me-22:hover{
+  outline: 2px solid white;
+}
+.me-22:focus{
+  transform: rotate(90deg);
+}
+.me-26{
+  max-width: 250px;
+  min-width: 250px;
+  text-align: center;
+  color: #222223;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  margin-right: 10px;
+  background-color: #d4d0d0;
+}
+
+.option__select{
+  background: white;
+  font-size: 13px !important;
+}
+.me-2{
+  padding-left:20px ;
+  margin-left: 15px;
+  box-sizing: border-box;
+  max-width: 100%;
+  border-radius: 50px;
+  color: #ece6e6 ;
+  background-color: #1a1a1a;
+  border: none;
+  outline: 2px solid #4c4b4b;
+}
+.me-2::placeholder{
+  color: #707478;
+}
+.me-2:focus{
+  border: none;
+  color: #aaa9a9;
+  background-color: transparent;
+  outline:2px solid #bbb9b9;
+}
+
+.nav-link{   
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #ffffff !important;
+  transition: .2s;
+}
+
+.nav-link:hover{
+  outline: 2px solid white;
+  transform: scale(1.1);
+  color: #eff9f3;
+}
+.nav-link:focus{
+  font-weight: 600;
+  color: #6795d1;
+}
+
+.nav-linkp{   
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #000000 !important;
+  transition: .2s;
+}
+
+.nav-linkp:hover{
+  outline: 2px solid white;
+  transform: scale(1.1);
+  color: #eff9f3;
+}
+.nav-linkp:focus{
+  font-weight: 600;
+  color: #6795d1;
+}
+
+#select__navbar option{
+  font-size: 20px;
+  color:#000;
+}
+#search-product{
+  margin-bottom: 5px;
+
+}
+
+.card{
+  background-color: #ece6e6;
+  padding: 10px;
+  user-select: none;
+  margin: 15px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)inset;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.card:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  opacity: 1;
+}
+.btn_Shop{
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-search{
+  width: 24px;
+  height: 24px;
+}
+.icon__shop{
+  width: 24px;
+  height: 24px;
+}
+.icon__shop:hover{
+  background: transparent;
+}
+.btn_Shop:hover {
+  background-color: transparent;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.btn_Shop:active {
+  background-color: transparent !important;
+  outline: none;
+
+}
+hr{
+  color: #f45757;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  color: #401a14;
+  font-weight: 400;
+  background-color: transparent ;
+  border: none;
+  outline: none;
+  border-radius:  0  0 10px 10px;
+}
+
+.icon-clear{
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+.icon-clear:hover{
+  transform: scale(1.3);
+  color: rgb(255, 255, 255);
+}
+.modal-header{
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  background-color: #000000;
+}
+.title-products h5{ 
+  text-align: center;
+}
+
+hr{
+  border: 1px solid rgb(7, 7, 7);
+}
+.icon_footer{
+  transition: 0.5s ease;
+}
+.icon_footer:hover{
+  transform: scale(1.2);
+}
+
+.modal-footer{
+  background-color: #ffffff;
+  padding: 20px;
+}
+.row-custom{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+.add-custom{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  transition: 0.3s ease;
+}
+.add-custom:hover{
+  background-color: transparent;
+  color: #000;
+  transform: scale(1.1);
+}
+.icon-add{
+  width: 30px;
+  height: 30px;
+}
+
+.title-detail{
+  text-shadow: 2px 4px 8px rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+.noFound{
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+.textNosotros{
+  color: rgb(0, 0, 0);
+  font-weight:400 ;
+}
+.btn-customN{
+  background-color: #343232;
+  color: #e8e7e7;
+  font-weight: 500;
+}
+.btn-customN:hover{
+  background-color: #5f5c5c;
+  color: #000;
+}
+
+.card-nosotros{
+  display: flex;
+  justify-content: center;
+}
+.infop{
+  color: #000000;
+}
