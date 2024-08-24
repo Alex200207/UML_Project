@@ -39,7 +39,7 @@ interface HeaderProps {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                <Link to="/Inicio" className="nav-link" >
+                <Link to="/" className="nav-link" >
                     Inicio
                   </Link>
                 </li>

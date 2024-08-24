@@ -29,7 +29,7 @@ const App: React.FC = () => {
             height="600px" name={""}          />
         <main>
           <Routes>
-            <Route path="inicio" element={<Home/>} />
+            <Route path="/" element={<Home/>} />
             <Route path="/disease/:name" element={<DiseasePage/>} />
             <Route path="Nosotros" element={<Nosotros/>} />
             <Route path="#" element={<InfoSection />} />

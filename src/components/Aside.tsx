@@ -15,7 +15,7 @@ const Aside: React.FC<AsideProps> = ({ isOpen }) => {
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
-          <Link to="/inicio" className="nav-linkp" aria-current="page">
+          <Link to="/" className="nav-linkp" aria-current="page">
             <IoMdHome /> Inicio
           </Link>
         </li>
