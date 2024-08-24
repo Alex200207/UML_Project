@@ -105,6 +105,7 @@ color: #c8c7c7 !important;
 
 
 main {
+  margin-bottom: 100px !important;
   margin-left: 0;
   width: 100;
 }
@@ -305,6 +306,35 @@ hr{
 .title-products h5{ 
   text-align: center;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px; 
+  overflow: hidden; 
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-text {
+  flex-grow: 1;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+.btn {
+  margin-top: auto;
+}
+
 
 hr{
   border: 1px solid rgb(7, 7, 7);
@@ -371,7 +401,37 @@ hr{
 .card-nosotros{
   display: flex;
   justify-content: center;
+}/*temas*/
+
+.infoh{
+  text-align: center;
+  margin: 50px 0 ;
+  font-weight: 600;
+  font-size: 50px;
 }
 .infop{
+  text-align: justify;
   color: #000000;
 }
+.infoli{
+  margin: 20px 0;
+}
+
+.imgContainer{
+  display: flex;
+  justify-content: center;
+
+}
+.infoImg{
+  display: flex;
+  justify-content: center !important;
+  width: 250px;
+  height: 250px;
+  margin-right: 10px; 
+  margin-bottom: 10px;
+}
+.infoImg2{
+  width: 500px;
+  height: 500px;
+}
+

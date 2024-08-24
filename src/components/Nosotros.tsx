@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 
 const Nosotros: React.FC = () => {
   return (
@@ -11,25 +11,16 @@ const Nosotros: React.FC = () => {
           </Col>
         </Row>
         <Row className="mb-5">
-          <Col >
-            <Card className="border-0 shadow card-nosotros">
-              <Card.Body className="d-flex justify-content-center align-items-center flex-column">
-                <Card.Title className="h4 ">Sobre Nosotros</Card.Title>
-                <Card.Text className="text-center ">
-                  Somos un equipo de docentes y estudiantes de la universidad Martin Lutero, que estamos innovando con la creación de un foro informativo 
-                  para la prevención, manejo y cuidado de las enfermedades crónicas con el objetivo de hacer conciencia de la importancia de buscar información
-                  en un foro que orienta acerca de diferentes enfermedades y cómo prevenirlas.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
         
         </Row>
         <Row className="text-center">
           <Col>
             <h3 className="h4 textNosotros">¡Únete a Nosotros!</h3>
             <p className="lead textNosotros">
-              Si compartes nuestra pasión por la innovación y el servicio, no dudes en ponerte en contacto con nosotros.
+              Si compartes nuestra pasión por la innovación y el servicio, no dudes en ponerte en contacto con nosotros.<br/>
+              Somos un equipo de docentes y estudiantes de la universidad Martin Lutero, que estamos innovando con la creación de un foro informativo 
+                  para la prevención, manejo y cuidado de las enfermedades crónicas con el objetivo de hacer conciencia de la importancia de buscar información
+                  en un foro que orienta acerca de diferentes enfermedades y cómo prevenirlas.
             </p>
             <a href="/contacto" className="btn btn-customN">Contáctanos</a>
           </Col>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import backgroundImage1 from '../assets/images/Banner de Salud Profesional Ilustrativo Azul.png';
+import backgroundImage2 from '../assets/images/1.png';
 
 
 
@@ -21,6 +22,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
   const [index, setIndex] = useState(0);
   const images = [
     { src: backgroundImage1, title: `Foro Informativo`, description: 'Prevencion de las enfermedades cronicas', textColor: '#000' },
+    { src: backgroundImage2, title: `Foro Informativo`, description: 'Prevencion de las enfermedades cronicas', textColor: '#000' },
   ];
   
 
