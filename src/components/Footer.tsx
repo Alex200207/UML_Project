@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
     </div>
   </div>
   <div className="text-center p-3 bg-dark text-white">
-    © 2024 Foro de Salud - Todos los derechos reservados.
+    © 2024 Foro de Salud - Todos los derechos reservados a InfoSalud.
   </div>
 </footer>
     );
