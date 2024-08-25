@@ -18,14 +18,14 @@ const App: React.FC = () => {
     };
 
     const closeAside = () => {
-        setIsAsideOpen(false); // Función para cerrar el sidebar
+        setIsAsideOpen(false); 
     };
 
     return (
         <>
-            <Header toggleAside={toggleAside} />
+            <Header toggleAside={toggleAside}  />
             <div className="d-flex">
-                <Aside isOpen={isAsideOpen} onClose={closeAside} /> {/* Pasa onClose aquí */}
+                <Aside isOpen={isAsideOpen} onClose={closeAside} /> 
                 <div className={`content ${isAsideOpen ? "aside-open" : ""}`}>
                     <Portada backgroundImage="path/to/image.jpg" height="600px" />
                     <main>

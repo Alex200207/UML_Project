@@ -119,7 +119,7 @@ main {
 }
 
 .nav-link:hover{
-  outline: 2px solid rgb(249, 249, 249);
+  outline: 2px solid white;
   color: #eff9f3;
 }
 .nav-link:focus{
@@ -131,7 +131,7 @@ main {
   border-radius: 5px;
   margin-right: 10px;
   color: #000000 !important;
-  transition: .2s;
+  transition: .2s ease-in-out;
 }
 
 .nav-linkp:hover{
@@ -240,16 +240,19 @@ main {
   height: 500px;
 }
 .btn-port {
-  border: none;
-  outline: none;
-  background-color: #4c4b4b !important;
-  transition: transform 0.3s ease;
+  color: #040404 !important;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out !important;
 }
 
 .btn-port:hover {
-  transform: scale(1.05);
+  color: #222222;
+  transform: scale(1.2);
+  font-weight: 600;
   cursor: pointer;
-  background-color: #5f5c5c !important;
+  background-color: transparent !important;
 }
 
 @media (max-width: 900px) {

@@ -59,19 +59,19 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.2)', // Ajusta la opacidad del fondo
+                backgroundColor: 'rgba(0, 0, 0, 0.2)', 
               }}
             />
             <Carousel.Caption
               className="present-custom"
               style={{
                 position: 'absolute',
-                top: '60%', // Baja la posición vertical al 60%
+                top: '60%', 
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
                 opacity: 0,
-                animation: 'fadeIn 1.5s ease-in-out forwards', // Reduce el tiempo de aparición a 1.5s
+                animation: 'fadeIn 1.5s ease-in-out forwards', 
               }}
             >
               <h1
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
                   color: image.textColor,
                   fontWeight: 700,
                   fontFamily: `'Montserrat', sans-serif`,
-                  fontSize: '3rem', // Aumenta el tamaño de la letra del título
+                  fontSize: '3rem',
                 }}
               >
                 {image.title}
@@ -91,13 +91,13 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
                   color: image.textColor,
                   fontWeight: 400,
                   fontFamily: `'Montserrat', sans-serif`,
-                  fontSize: '1rem', // Reduce el tamaño de la letra de la descripción
+                  fontSize: '1rem', 
                   display: '-webkit-box',
-                  WebkitLineClamp: 2, // Limita el texto a 2 líneas
+                  WebkitLineClamp: 2, 
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
-                  margin: 0, // Elimina el margen inferior
-                  whiteSpace: 'normal', // Permite que las palabras se desborden y bajen a la siguiente línea
+                  margin: 0, 
+                  whiteSpace: 'normal', 
                 }}
               >
                 {image.description}

@@ -118,7 +118,9 @@ Algunas personas con hipertensión arterial pueden presentar lo siguiente:`,
       imageUrl2: "",
       imageUrl3: hipertencion,
     },
-    // Add more diseases as needed...
+   
+
+    
   };
 
   const info = diseaseInfo[name || ""] || {

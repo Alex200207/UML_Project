@@ -8,7 +8,7 @@ interface InfoCardProps {
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, description, image }) => {
-    // Normalizar el título y quitar acentos
+
     const normalizedTitle = title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
     return (

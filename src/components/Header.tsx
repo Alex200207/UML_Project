@@ -11,7 +11,7 @@ interface HeaderProps {
     return (
         <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
           <div className="container">
-            <button className="btn me-22" onClick={toggleAside}>
+            <button className="btn me-22" onClick={toggleAside} >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
