@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { MdAccountCircle } from "react-icons/md";
+import { BiBookReader } from "react-icons/bi";
 import { IoMdHome } from "react-icons/io";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { MdProductionQuantityLimits } from "react-icons/md";
+import { CiMedicalClipboard } from "react-icons/ci";
 
 interface AsideProps {
   isOpen: boolean;
@@ -37,12 +37,12 @@ const Aside: React.FC<AsideProps> = ({ isOpen, onClose }) => {
         </li>
         <li className="nav-item">
           <Link to="/Nosotros" className="nav-linkp">
-            <MdAccountCircle /> Nosotros
+          <BiBookReader /> Nosotros
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/Consulta" className="nav-linkp">
-            <MdProductionQuantityLimits /> Consulta
+          <CiMedicalClipboard /> Consulta
           </Link>
         </li>
       </ul>

@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
   const [index, setIndex] = useState(0);
   const images = [
     { src: backgroundImage1, title: 'Foro Informativo', description: 'Prevención de las enfermedades crónicas', textColor: '#fff' },
-    { src: backgroundImage2, title: 'Foro Informativo', description: 'Prevención de las enfermedades crónicas', textColor: '#FFF' },
+    { src: backgroundImage2, title: 'Consultas y más', description: 'Prevención de las enfermedades crónicas', textColor: '#FFF' },
   ];
 
   const handleSelect = (selectedIndex: number) => {
