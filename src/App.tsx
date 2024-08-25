@@ -30,7 +30,7 @@ const App: React.FC = () => {
                     <Portada backgroundImage="path/to/image.jpg" height="600px" />
                     <main>
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/UML_Project" element={<Home />} />
                             <Route path="/disease/:name" element={<DiseasePage />} />
                             <Route path="Nosotros" element={<Nosotros />} />
                             <Route path="Consulta" element={<InfoSection />} />

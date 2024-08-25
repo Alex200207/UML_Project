@@ -39,7 +39,7 @@ interface HeaderProps {
             <div className="  navbarCollection" id="navbarNav">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                <Link to="/" className="nav-link" >
+                <Link to="/UML_Project" className="nav-link" >
                     Inicio
                   </Link>
                 </li>
