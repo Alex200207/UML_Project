@@ -6,10 +6,7 @@ const Footer: React.FC = () => {
   <div className="container p-4">
     <div className="row">
       <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 className="text-uppercase">Acerca de Nosotros</h5>
-        <p>
-          Somos una comunidad dedicada a promover la salud y el bienestar, proporcionando información y soporte a través de discusiones abiertas y colaborativas.
-        </p>
+       
       </div>
       <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 className="text-uppercase">Categorías Populares</h5>
