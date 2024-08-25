@@ -12,8 +12,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
   const [index, setIndex] = useState(0);
   const images = [
-    { src: backgroundImage1, title: `Foro Informativo`, description: 'Prevención de las enfermedades crónicas', textColor: '#000' },
-    { src: backgroundImage2, title: `Foro Informativo`, description: 'Prevención de las enfermedades crónicas', textColor: '#000' },
+    { src: backgroundImage1, title: 'Foro Informativo', description: 'Prevención de las enfermedades crónicas', textColor: '#fff' },
+    { src: backgroundImage2, title: 'Foro Informativo', description: 'Prevención de las enfermedades crónicas', textColor: '#FFF' },
   ];
 
   const handleSelect = (selectedIndex: number) => {
@@ -30,8 +30,12 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
         position: 'relative',
       }}
     >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+        rel="stylesheet"
+      />
       <Carousel
-      className='carousel-custom'
+        className="carousel-custom"
         activeIndex={index}
         onSelect={handleSelect}
         interval={2500}
@@ -47,13 +51,69 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
                 height,
               }}
             />
-            <Carousel.Caption className="present-custom" style={{ position: 'absolute', bottom: '15%', right: '50%' }}>
-              <h1 className="display-4" style={{ color: image.textColor }}>{image.title}</h1>
-              <p className="lead mb-5" style={{ color: image.textColor }}>{image.description}</p>
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'rgba(0, 0, 0, 0.2)', // Ajusta la opacidad del fondo
+              }}
+            />
+            <Carousel.Caption
+              className="present-custom"
+              style={{
+                position: 'absolute',
+                top: '60%', // Baja la posición vertical al 60%
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                textAlign: 'center',
+                opacity: 0,
+                animation: 'fadeIn 1.5s ease-in-out forwards', // Reduce el tiempo de aparición a 1.5s
+              }}
+            >
+              <h1
+                className="display-4"
+                style={{
+                  color: image.textColor,
+                  fontWeight: 700,
+                  fontFamily: `'Montserrat', sans-serif`,
+                  fontSize: '3rem', // Aumenta el tamaño de la letra del título
+                }}
+              >
+                {image.title}
+              </h1>
+              <p
+                className="lead mb-5"
+                style={{
+                  color: image.textColor,
+                  fontWeight: 400,
+                  fontFamily: `'Montserrat', sans-serif`,
+                  fontSize: '1rem', // Reduce el tamaño de la letra de la descripción
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2, // Limita el texto a 2 líneas
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis', // Agrega puntos suspensivos si el texto es demasiado largo
+                  margin: 0, // Elimina el margen inferior
+                  whiteSpace: 'normal', // Permite que las palabras se desborden y bajen a la siguiente línea
+                }}
+              >
+                {image.description}
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
+      <style>
+        {`
+          @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+        `}
+      </style>
     </header>
   );
 };

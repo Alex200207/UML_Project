@@ -15,14 +15,14 @@
 }
 
 
-
 .sidebar {
+  border-radius: 10px;
   position: fixed;
-  top: 0;
+  top: 50px;
   width: 230px;
-  height: 100%;
+  height: 80%;
   background-color: #fffcfc;
-  padding-top: 60px;
+  padding-top: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 100;
   margin-top: 10px;
@@ -38,7 +38,6 @@
 .sidebar a {
   margin-bottom: 30px;
   border: none;
-  color: #000000;
   display: block;
   padding: 16px;
   text-decoration: none;
@@ -50,7 +49,7 @@
 .sidebar a:hover {
   text-decoration: none;
   color: #ffffff;
-  background: #5f5c5c;
+  background: #cecece;
 }
 
 .content {
@@ -59,24 +58,28 @@
   width: 100%;
 }
 .navbar-custom {
+  backdrop-filter: blur(2px);
   z-index: 1000;
   position: fixed !important;
   width: 100%;
-  background-color:#313131; 
-
+  background-color:transparent; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); 
 }
+.navbarCollection{
+
+}
+
 .navbar-brand{
-  color: #efe0e0 !important;
+  color: #040404 !important;
   margin: 0 15px ;
   font-weight: 700;
   transition: .2s ease;
 }
 .navbar-brand:focus{
-color: #c8c7c7 !important;
+color: #535353 !important;
 }
 .navbar-brand:hover{
-  color: #e5abcd;
+  color: #414141;
   transform: rotate(10deg);
 }
 
@@ -107,14 +110,15 @@ main {
 
 
 .nav-link{   
+  font-weight: 720;
   border-radius: 5px;
   margin-right: 10px;
-  color: #ffffff !important;
-  transition: .2s;
+  color: #000000 !important;
+  transition: .4s;
 }
 
 .nav-link:hover{
-  outline: 2px solid white;
+  outline: 2px solid rgb(0, 0, 0);
   transform: scale(1.1);
   color: #eff9f3;
 }

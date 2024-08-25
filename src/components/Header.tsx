@@ -10,7 +10,7 @@ interface HeaderProps {
   const Header: React.FC<HeaderProps> = ({ toggleAside}) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
-          <div className="container-fluid">
+          <div className="container">
             <button className="btn me-22" onClick={toggleAside}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ interface HeaderProps {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="  navbarCollection" id="navbarNav">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
                 <Link to="/" className="nav-link" >
