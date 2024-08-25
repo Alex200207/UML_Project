@@ -52,6 +52,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
               }}
             />
             <div
+              className="overlay-custom"
               style={{
                 position: 'absolute',
                 top: 0,
@@ -95,7 +96,6 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage, height }) => {
                   WebkitLineClamp: 2, // Limita el texto a 2 líneas
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
-                  textOverflow: 'ellipsis', // Agrega puntos suspensivos si el texto es demasiado largo
                   margin: 0, // Elimina el margen inferior
                   whiteSpace: 'normal', // Permite que las palabras se desborden y bajen a la siguiente línea
                 }}
