@@ -143,7 +143,15 @@ main {
   font-weight: 600;
   color: #6795d1;
 }
-
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:url(./assets//images/overlay.png);
+  z-index: -1;
+}
 
 .card{
   background-color: #ece6e6;

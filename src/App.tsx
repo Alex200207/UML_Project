@@ -24,11 +24,13 @@ const App: React.FC = () => {
     return (
         <>
             <Header toggleAside={toggleAside}  />
+            
             <div className="d-flex">
                 <Aside isOpen={isAsideOpen} onClose={closeAside} /> 
                 <div className={`content ${isAsideOpen ? "aside-open" : ""}`}>
                     <Portada backgroundImage="path/to/image.jpg" height="600px" />
                     <main>
+                    <div className="overlay"></div>
                         <Routes>
                             <Route path="/UML_Project" element={<Home />} />
                             <Route path="/disease/:name" element={<DiseasePage />} />
